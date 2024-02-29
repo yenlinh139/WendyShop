@@ -1,0 +1,130 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.footer {
+    background-color: #222;
+    padding-top: 60px;
+    padding-bottom: 0;
+    .footer-about{
+        margin-bottom: 30px;
+        h1 {
+            color: map.get($theme-color, "white"); 
+            span{color: map.get($theme-color, "main")}
+        };
+        .footer-about-logo {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        ul li {
+            font-size: 16px;
+            color: map.get($theme-color, "light");
+            line-height: 34px;
+            list-style: none;
+        }
+    }
+    .footer-widget{
+        margin-bottom: 30px;
+        overflow: hidden;
+        padding-top: 16px;
+        padding-left: 5px;
+
+        h6 {
+            color: map.get($theme-color, "white"); 
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        ul {
+            float: left;
+            width: 50%;
+            li {
+                list-style: none;
+
+                a{
+                    color: map.get($theme-color, "light"); 
+                    font-size: 16px;
+                    line-height: 34px;
+                    text-decoration: none;
+
+                }
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 34px;
+            color: map.get($theme-color, "light"); 
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+            .input-group {
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                    font-size: 14px;
+                    padding-left: 20px;
+                    color: map.get($theme-color, "light"); 
+                    height: 46px;
+                    border: 1px solid #ededed;
+    
+                    ::placeholder {
+                        color: map.get($theme-color, "light"); 
+                    }
+                }
+                button {
+                    padding: 0 26px ;
+                    height: 48px;
+                    min-width: max-content;
+                }
+            }
+            
+        }
+    }
+
+}
+
+.footer-bottom {
+    background: #1A1A1A;
+
+    .footer-widget-social {
+        ul{
+            display: flex;
+            padding: 7px 0;
+            column-gap: 10px;
+            list-style: none;
+            li {
+                font-size: 16px;
+                color: map.get($theme-color, "white"); 
+                display: flex;
+                align-items: center;
+                column-gap: 7px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    color: map.get($theme-color, "white"); 
+                    font-weight: 700;
+                }
+                :hover {
+                    font-size: 16px;
+                    background-color: map.get($theme-color, "main");
+                    border-radius: 50%;
+                    color: map.get($theme-color, "white");
+                    border: 1px solid map.get($theme-color, "light");
+                    border-color: map.get($theme-color, "white") ;
+                }
+                svg {
+                    font-size: 20px;
+                    padding: 3px;
+                    color: map.get($theme-color, "white");
+                    border-radius: 50%;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+} 
