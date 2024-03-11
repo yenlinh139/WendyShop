@@ -1,0 +1,197 @@
+@use "sass:map";
+@import "style/pages/all";
+
+.product-zoom-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .product-zoom-container img {
+    transition: transform 0.3s ease;
+    width: 90%;
+  }
+  
+  .product-zoom-container img.zoomed-in {
+    transform: scale(1.2); /* Zoom khi hover */
+  }
+
+.decription-tab {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+   
+      
+      /* CSS cho tab hiện tại */
+    &.active {
+        background-color: #fff;
+        border-bottom: 2px solid map.get($theme-color, "main"); /* Màu sắc của tab hiện tại */
+      }
+      
+      /* CSS cho nội dung của tab */
+      
+  }
+}
+
+#decription {
+   
+    margin-bottom: 30px;
+    .decription-item{
+        display: flex;
+        padding-bottom: 20px;
+       
+    }
+    h6 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #777777;
+        margin-left: 50px;
+    }
+}
+.detailProduct {
+margin-bottom: 20px;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+
+    ul {
+        padding-bottom: 15px;
+        display: flex;
+        list-style: none;
+        color: #FEE826;
+        font-size: 26px;
+        .star-1 {
+            color: #FEE826;
+        }
+        h6 {
+            color: #777777;
+            font-weight: 500;
+            padding-left: 20px;
+            padding-top: 3px;
+        }
+    }
+    h5{
+        font-size: 26px;
+        font-weight: 600;
+        color: map.get($theme-color,"main");
+        span {
+            color:  map.get($theme-color, "normal-text");
+            text-decoration: line-through;
+            font-weight: 300;
+            padding-right: 30px;
+            font-size: 20px;
+        }
+    }
+    .detailProduct-item {
+        padding-top: 20px;
+        display: flex;
+
+        h6 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #777777;
+        }
+        .detailProduct-discount {
+            color: map.get($theme-color, "main");
+            font-weight: 500;
+            margin-left: 20px;
+            font-size: 14px;
+            padding: 10px 16px;
+            background-color: #ffebd6;
+            cursor: pointer;
+        }
+        p{margin-left: 20px;}
+        .detailProduct-Variation {
+            margin-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            ul li{
+                
+                margin-right: 15px;
+                a{
+                    text-decoration: none;
+                    color: map.get($theme-color, "normal-text");
+                    font-size: 16px;
+                    padding: 10px 8px 8px;
+                    border: 0.5px solid #afafaf;
+                    &:hover {
+                        color: map.get($theme-color, "white");
+                        background-color: map.get($theme-color, "main");
+                        border: none;
+                    }
+                }
+                
+            }
+        }
+        .detailProduct-crement {
+            display: flex;
+            margin-left: 20px;
+            button {
+                padding: 5px 10px;
+                cursor: pointer;
+                background-color: map.get($theme-color, "white");
+                border: #9b9b9b solid 0.5px;
+                font-size: 16px;
+
+                &:hover {
+                   color: map.get($theme-color, "white"); 
+                   background-color: map.get($theme-color, "main");
+                }
+            }
+            p {
+                padding: 5px 20px;
+                cursor: pointer;
+                background-color: map.get($theme-color, "white");
+                border: #9b9b9b solid 0.5px;
+                font-size: 16px;
+                margin: 0;
+
+                &:hover {
+                   color: map.get($theme-color, "white"); 
+                   background-color: map.get($theme-color, "main");
+                }
+            }
+            h5 {
+                font-size: 14px;
+            font-weight: 400;
+            color: #777777;
+            padding-left: 20px;
+            line-height: 32px;
+            }
+        }
+        .detailProduct-cart {
+            border: 1px solid map.get($theme-color, "main");
+            color: map.get($theme-color, "main");
+            font-weight: 500;
+            font-size: 18px;
+            padding: 15px 16px;
+            background-color: #ffebd6;
+            cursor: pointer;
+        }
+        .detailProduct-shopping {
+            color: map.get($theme-color, "white");
+            font-weight: 500;
+            margin-left: 25px;
+            font-size: 18px;
+            padding: 15px 50px;
+            background-color: map.get($theme-color, "main");
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+.decription-detail {
+    padding-bottom: 20px;
+    padding: 0 100px 20px;
+}

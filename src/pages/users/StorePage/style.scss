@@ -1,0 +1,193 @@
+@use "sass:map";
+@import "style/pages/all";
+
+$bannerImg: "/assets/users/images/hero/banner1 1.png";
+
+.hero-search-container {
+
+    .hero-search-form{
+        
+        form {
+            display: flex;
+            align-items: center;
+        }
+    
+         input {
+            border: none;
+            height: 48px;
+            font-size: 16px;
+            color: map.get($theme-color, "light");
+            width: 70%;
+            border: 1px solid #ebebeb;
+    
+            :focus {
+                outline: none;
+                border: none;
+            }
+         }
+         button {
+            font-size: 20px;
+            color: map.get($theme-color, "white");
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+            padding: 12px 21px 9px;
+            background: map.get($theme-color, "main");
+            border: none;
+            cursor: pointer;
+         }
+    }   
+}
+
+
+.shop-title {
+    position: relative;
+        margin-bottom: 50px;
+        text-align: center;
+    
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        height: 1px;
+        opacity: 0.5;
+        width: 100%;
+        background-color: #999999;
+        content: "";
+        margin: 0 auto;
+    }
+    
+}
+
+.Featured {
+
+   .react-tabs {
+        ul{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            border: none;
+            
+        }
+        li {
+            list-style: none;
+            font-size: 18px;
+            color: map.get($theme-color, "normal-text");
+            display: inline-block;
+            margin-right: 25px;
+            position: relative;
+            border: none;
+            cursor: pointer;
+        }
+   }
+   .featured-item {
+        margin-bottom: 50px;
+        padding-right: 15px;
+
+        &:hover {
+            .featured-item-pic-hover {
+                bottom: -12% !important;
+            }
+        }
+
+        .featured-item-pic {
+            height: 270px;
+            position: relative;
+            overflow: hidden;
+            background-position: center;
+           
+
+            .featured-item-pic-hover {
+                position: absolute;
+                left: 0;
+                bottom: -40%;
+                width: 100%;
+                text-align: center;
+                transition: all 0.5s;
+
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    margin-right: 10px;
+
+                    &:hover {
+                        svg {
+                            background: #d65c30dd;
+                            border-color: #d65c30dd;
+                            color: white;
+                            transform: rotate(360deg) !important;
+                        }
+                    }
+                    svg {
+                        padding: 7px;
+                        height: 20px;
+                        width: 20px;
+                        border: 1px solid #ebebeb;
+                        background-color: white;
+                        color: map.get($theme-color, "light");
+                        transition:  all 0.3s;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .featured-item-text {
+            text-align: center;
+
+            h6 {
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 500;
+
+                a {
+                    color: map.get($theme-color, "normal-text");
+                    text-decoration: none;
+                }
+            }
+
+            h5 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 10px;
+                color: map.get($theme-color, "normal-text");
+            }
+        }
+   }
+}
+.menu-shop {
+    margin-top: 30px;
+    h4 {
+        font-weight: 600;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    h4:after {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        height: 3px;
+        width: 80px;
+        background-color: map.get($theme-color, "main");
+        content: "";
+        margin: 0 auto 5px;
+    }
+    ul li {
+        padding-top: 15px;
+        list-style: none;
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        color: map.get($theme-color, "normal-text");
+    }
+    a:hover{
+        color: map.get($theme-color, "main");
+    }
+    }
+        
+}

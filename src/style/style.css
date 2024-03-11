@@ -21,6 +21,10 @@ html, body {
   flex-wrap: wrap;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .col-1 {
   flex: 0 0 auto;
   width: 8.33333333%;
@@ -79,6 +83,18 @@ html, body {
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
+}
+
+.btn-main {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 16px 30px 17px;
+  background: #FF8400;
+  border: none;
+  border-radius: 45px;
 }
 
 .button-submit {
@@ -154,9 +170,49 @@ html, body {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-md-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
   }
   .col-md-12 {
     flex: 0 0 auto;
@@ -164,9 +220,49 @@ html, body {
   }
 }
 @media only screen and (max-width: 767px) {
+  .col-sm-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-sm-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
   .col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
+  }
+  .col-sm-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-sm-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
   }
   .col-sm-12 {
     flex: 0 0 auto;
@@ -174,7 +270,8 @@ html, body {
   }
 }
 @media only screen and (max-width: 575px) {
-  .col-sm {
-    flex: 1 0 0%;
+  .col-xs {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
