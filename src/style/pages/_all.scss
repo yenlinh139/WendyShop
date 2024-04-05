@@ -10,12 +10,43 @@ html, body {
     padding: 0;
     margin: 0;
 }
-.container {
-    max-width: 1170px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
 }
 .row {
     display: flex;
@@ -86,6 +117,12 @@ html, body {
     flex: 0 0 auto;
     width: 100%;
   }
+  .d-none {
+    display: none ;
+  }
+  .d-block {
+    display: block;
+  }
   .btn-main {
     font-size: 14px;
     color: map.get($theme-color, "white");
@@ -112,16 +149,68 @@ html, body {
 }
 
 @include Responsive($DESKTOP) {
-    .col-xl-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-    .col-xl-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }   
+  .d-xl-none {
+    display: none;
+  }
+  .col-xl-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-xl-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-xl-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-xl-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-xl-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .col-xl-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-xl-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-xl-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-xl-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-xl-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-xl-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .col-xl-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+    .d-xl-block {
+      display: block !important;
+    } 
 }
 @include Responsive($MEDIUM-DEVICE) {
+    .d-lg-block {
+      display: block !important;
+    }
+    .d-lg-none {
+      display: none;
+    }
     .col-lg-1 {
         flex: 0 0 auto;
         width: 8.33333333%;
@@ -172,6 +261,12 @@ html, body {
       }
 }
 @include Responsive($TABLET-DEVICE) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-none {
+    display: none;
+  }
   .col-md-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
@@ -223,6 +318,9 @@ html, body {
     
 }
 @include Responsive($WIDE-MOBILE) {
+  .d-sm-none {
+    display: none;
+  }
   .col-sm-1 {
     flex: 0 0 auto;
     width: 8.33333333%;
@@ -273,6 +371,9 @@ html, body {
 } 
 }
 @include Responsive($SMALL-DEVICE) {
+  .d-xs-none {
+    display: none;
+  }
     .col-xs {
       flex: 0 0 auto;
         width: 100%;
